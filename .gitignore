@@ -1,0 +1,13 @@
+# Ustawienia IntelliJ
+.idea/
+
+# Pliki tymczasowe Pythona
+__pycache__/
+*.pyc
+
+# Kopie zapasowe
+*.tar.gz
+*.sql
+
+# Pliki środowiskowe
+.env
