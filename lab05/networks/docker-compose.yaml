@@ -1,0 +1,28 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8087:80"
+    networks:
+      - frontend
+
+  app:
+    image: alpine
+    command: sleep 3600
+    networks:
+      - frontend
+      - backend
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: secret
+    networks:
+      - backend
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+    internal: true

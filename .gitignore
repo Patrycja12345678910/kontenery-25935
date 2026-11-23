@@ -11,3 +11,12 @@ __pycache__/
 
 # Pliki środowiskowe
 .env
+*.env
+
+# Zależności Node.js
+node_modules/
+
+# Pliki tymczasowe
+*.log
+
+!lab05/volumes/init.sql
